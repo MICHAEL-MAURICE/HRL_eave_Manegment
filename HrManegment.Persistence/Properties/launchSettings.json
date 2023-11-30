@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "HrManagement.Persistence": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:64339;http://localhost:64340"
+    }
+  }
+}

@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HR.LeaveManagement.Domain;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace HrManegment.Persistence.DatabaseContext
 {
-    public class HrDatabaseContext : DbContext
+    public class HrDatabaseContext : IdentityDbContext<ApplicationUser>
     {
         public HrDatabaseContext()
         {

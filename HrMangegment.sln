@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HrManegment.Application.uni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HrManegment.Application.IntegrationTest", "HrManegment.Application.IntegrationTest\HrManegment.Application.IntegrationTest.csproj", "{5CD846E5-D544-480D-AA2E-DA506FFAAFA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity", "Identity\Identity.csproj", "{40CA83E1-541A-4C79-A888-9773D9CD6885}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{5CD846E5-D544-480D-AA2E-DA506FFAAFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CD846E5-D544-480D-AA2E-DA506FFAAFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CD846E5-D544-480D-AA2E-DA506FFAAFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CA83E1-541A-4C79-A888-9773D9CD6885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CA83E1-541A-4C79-A888-9773D9CD6885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CA83E1-541A-4C79-A888-9773D9CD6885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CA83E1-541A-4C79-A888-9773D9CD6885}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{9837818E-FB3E-4937-AFB5-6F6D201E2D04} = {2E19E492-CD31-410B-A836-0F7532EA297A}
 		{992DB8C2-49B2-40DA-97F6-1D122D20BE7B} = {8E551598-354B-40BC-95F8-D5294A8EB918}
 		{5CD846E5-D544-480D-AA2E-DA506FFAAFA2} = {8E551598-354B-40BC-95F8-D5294A8EB918}
+		{40CA83E1-541A-4C79-A888-9773D9CD6885} = {A67B1C88-F654-493F-94B0-F6DA5B8E0C28}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {143AE47F-E93E-41BA-BCD6-BB714D1F5D21}

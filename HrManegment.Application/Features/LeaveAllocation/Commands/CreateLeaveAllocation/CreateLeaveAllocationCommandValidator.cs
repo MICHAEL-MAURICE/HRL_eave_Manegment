@@ -11,6 +11,7 @@ namespace HR.LeaveManagement.Application.DTOs.LeaveAllocation.Validators
 {
     public class CreateLeaveAllocationCommandValidator : AbstractValidator<CreateLeaveAllocationCommand>
     {
+
         private readonly ILeaveTypeRepository _leaveTypeRepository;
 
         public CreateLeaveAllocationCommandValidator(ILeaveTypeRepository leaveTypeRepository)
@@ -18,8 +19,7 @@ namespace HR.LeaveManagement.Application.DTOs.LeaveAllocation.Validators
             _leaveTypeRepository = leaveTypeRepository;
 
             RuleFor(p => p.LeaveTypeId)
-                
-                .MustAsync(LeaveTypeMustExist)
+                                .MustAsync(LeaveTypeMustExist)
                 .WithMessage("{PropertyName} does not exist.");
         }
 

@@ -26,7 +26,7 @@ namespace HR.LeaveManagement.Application.DTOs.LeaveAllocation.Validators
                 .GreaterThanOrEqualTo(DateTime.Now.Year).WithMessage("{PropertyName} must be after {ComparisonValue}");
 
             RuleFor(p => p.LeaveTypeId)
-             
+                
                 .MustAsync(LeaveTypeMustExist)
                 .WithMessage("{PropertyName} does not exist.");
 

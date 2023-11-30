@@ -1,0 +1,25 @@
+2023-11-30 10:21:30.514 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-11-30 10:21:30.583 +02:00 [INF] Now listening on: https://localhost:7242
+2023-11-30 10:21:30.584 +02:00 [INF] Now listening on: http://localhost:5201
+2023-11-30 10:21:30.586 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-30 10:21:30.587 +02:00 [INF] Hosting environment: Development
+2023-11-30 10:21:30.588 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-11-30 10:21:44.391 +02:00 [ERR] HTTP POST /api/Auth/login responded 500 in 6899.0985 ms
+2023-11-30 10:22:44.878 +02:00 [ERR] HTTP POST /api/Auth/login responded 500 in 53.6357 ms
+2023-11-30 10:22:49.078 +02:00 [ERR] HTTP POST /api/Auth/login responded 500 in 18.8654 ms
+2023-11-30 10:22:57.910 +02:00 [ERR] HTTP POST /api/Auth/login responded 500 in 15.1883 ms
+2023-11-30 10:23:05.109 +02:00 [ERR] HTTP POST /api/Auth/login responded 500 in 17.0650 ms
+2023-11-30 10:23:22.668 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-11-30 10:23:22.724 +02:00 [INF] Now listening on: https://localhost:7242
+2023-11-30 10:23:22.726 +02:00 [INF] Now listening on: http://localhost:5201
+2023-11-30 10:23:22.727 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-30 10:23:22.728 +02:00 [INF] Hosting environment: Development
+2023-11-30 10:23:22.728 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-11-30 10:29:24.392 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-11-30 10:29:24.447 +02:00 [INF] Now listening on: https://localhost:7242
+2023-11-30 10:29:24.449 +02:00 [INF] Now listening on: http://localhost:5201
+2023-11-30 10:29:24.450 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-11-30 10:29:24.451 +02:00 [INF] Hosting environment: Development
+2023-11-30 10:29:24.451 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-11-30 10:29:41.759 +02:00 [ERR] {"Errors":{},"Type":"NotFoundException","Title":"User with string not found. (string) was not found","Status":404,"Detail":null,"Instance":null,"Extensions":{}}
+2023-11-30 10:29:41.772 +02:00 [INF] HTTP POST /api/Auth/login responded 404 in 10550.4879 ms
