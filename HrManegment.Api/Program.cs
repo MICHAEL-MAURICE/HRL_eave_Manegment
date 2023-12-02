@@ -12,9 +12,14 @@ using HR.LeaveManagement.Identity;
 using HR.LeaveManagement.Infrastructure;
 using HrManegment.Application;
 using HrManegment.Persistence;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
 
 // Add services to the container.
 
@@ -29,6 +34,7 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
 
 builder.Services.AddControllers();
+
 
 builder.Services.AddCors(options =>
 {

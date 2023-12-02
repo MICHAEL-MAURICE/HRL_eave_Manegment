@@ -26,8 +26,8 @@ namespace HrManegment.Persistence
             });
 
 
-            services.AddDbContext<HrDatabaseContext>(options =>
-              options.UseSqlServer(configuration.GetConnectionString("HrDatabaseConnectionString")));
+            //services.AddDbContext<HrDatabaseContext>(options =>
+            //  options.UseSqlServer(configuration.GetConnectionString("HrDatabaseConnectionString")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<HrDatabaseContext>().AddDefaultTokenProviders();

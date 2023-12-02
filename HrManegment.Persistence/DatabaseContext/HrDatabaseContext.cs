@@ -7,17 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 using HR.LeaveManagement.Domain;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using HR.LeaveManagement.Application.Contracts.Identity;
 
 namespace HrManegment.Persistence.DatabaseContext
 {
     public class HrDatabaseContext : IdentityDbContext<ApplicationUser>
     {
+     
         public HrDatabaseContext()
         {
 
         }
-        public HrDatabaseContext(DbContextOptions<HrDatabaseContext> options) : base(options)
+        public HrDatabaseContext(DbContextOptions<HrDatabaseContext> options  ) : base(options)
         {
+            
 
         }
 
@@ -38,10 +41,14 @@ namespace HrManegment.Persistence.DatabaseContext
                 .Where(q => q.State == EntityState.Added || q.State == EntityState.Modified))
             {
                 entry.Entity.DateModified = DateTime.Now;
+                
 
                 if (entry.State == EntityState.Added)
                 {
                     entry.Entity.DateCreated = DateTime.Now;
+              
+
+
                 }
             }
 
