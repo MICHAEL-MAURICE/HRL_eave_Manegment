@@ -5,10 +5,17 @@ using HR.LeaveManagement.Application.Models.Identity;
 using HR.LeaveManagement.Domain;
 
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.VisualBasic;
+using System.CodeDom.Compiler;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace HR.LeaveManagement.Identity.Services
@@ -18,18 +25,24 @@ namespace HR.LeaveManagement.Identity.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtSettings _jwtSettings;
+        private readonly IConfiguration _configuration;
+        private readonly IConfigurationRoot _configurationRoot;
 
         public AuthService(UserManager<ApplicationUser> userManager,
             IOptions<JwtSettings> jwtSettings,
-            SignInManager<ApplicationUser> signInManager)
+            SignInManager<ApplicationUser> signInManager,IConfiguration configuration)
         {
             _userManager = userManager;
             _jwtSettings = jwtSettings.Value;
             _signInManager = signInManager;
+            _configuration = configuration;
+            _configurationRoot = (IConfigurationRoot)configuration;
         }
 
         public async Task<AuthResponse> Login(AuthRequest request)
         {
+
+            
             var user = await _userManager.FindByEmailAsync(request.Email);
 
             if (user == null)
@@ -53,6 +66,10 @@ namespace HR.LeaveManagement.Identity.Services
                 Email = user.Email,
                 UserName = user.UserName
             };
+
+          
+
+           
 
             return response;
         }
@@ -90,6 +107,8 @@ namespace HR.LeaveManagement.Identity.Services
 
         private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
         {
+
+           
             var userClaims = await _userManager.GetClaimsAsync(user);
             var roles = await _userManager.GetRolesAsync(user);
 
@@ -117,6 +136,69 @@ namespace HR.LeaveManagement.Identity.Services
                signingCredentials: signingCredentials);
             return jwtSecurityToken;
         }
+
+
+        public async Task<string> RefreshToken(string Token)
+        {
+            var jwt = new JwtSecurityTokenHandler().ReadJwtToken(Token);
+            string userId = jwt.Claims.First(c => c.Type == "uid").Value;
+           
+           
+            var user = await _userManager.FindByIdAsync(userId);
+
+            var NewToken  =  await GenerateToken(user);
+                     
+            return  new JwtSecurityTokenHandler().WriteToken(NewToken);
+        }
+
+
+         public async void LogoutAllUsers()
+        {
+            var filePath = Path.Combine(AppContext.BaseDirectory, "appSettings.json");
+
+         
+
+            string json = File.ReadAllText(filePath);
+
+            dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+
+
+
+
+
+
+
+
+
+
+
+            jsonObj["JwtSettings"]["Key"] = GenerateKeyForJwt();
+
+            
+
+
+          
+
+string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+
+            File.WriteAllText(filePath, output);
+        }
+
+        private string GenerateKeyForJwt()
+        {
+            var rng = new RNGCryptoServiceProvider();
+            var keyBytes = new byte[32];
+            rng.GetBytes(keyBytes);
+
+            
+            string jwtKey = Convert.ToBase64String(keyBytes);
+
+            return jwtKey;
+
+        }
+
+
+
 
     }
 }

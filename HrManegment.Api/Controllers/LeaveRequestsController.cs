@@ -59,7 +59,7 @@ public class LeaveRequestsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(400)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    [ProducesDefaultResponseType]
+  
     public async Task<ActionResult> Put(UpdateLeaveRequestCommand leaveRequest)
     {
         await _mediator.Send(leaveRequest);
@@ -72,7 +72,7 @@ public class LeaveRequestsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(400)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    [ProducesDefaultResponseType]
+   
     public async Task<ActionResult> CancelRequest(CancelLeaveRequestCommand cancelLeaveRequest)
     {
         await _mediator.Send(cancelLeaveRequest);
@@ -85,7 +85,7 @@ public class LeaveRequestsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(400)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    [ProducesDefaultResponseType]
+   
     public async Task<ActionResult> UpdateApproval(ChangeLeaveRequestApprovalCommand updateApprovalRequest)
     {
         await _mediator.Send(updateApprovalRequest);

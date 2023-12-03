@@ -30,11 +30,17 @@ namespace HrManegment.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IReadOnlyList<T>> GetAsync()
+        public async Task<IReadOnlyList<T>> GetAsync(int PageNumber = 1, int Count = 10)
         {
-            return await _context.Set<T>().ToListAsync();
-        }
+            if (PageNumber > 0 && Count > 0)
+            {
+                int AlreadyseenCount = (PageNumber - 1) * Count;
 
+                return await _context.Set<T>().Skip(AlreadyseenCount)
+                    .Take(Count).ToListAsync();
+            }
+            return  new List<T>() { };
+        }
       
 
         public async Task<T> GetByIdAsync(Guid id)

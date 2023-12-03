@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace HrManegment.Application.Features.LeaveType.Queries.GetAllLeaveTypes
 {
-    public record GetLeaveTypesQuery:IRequest<IEnumerable<LeaveTypeDto>>;
+    public record GetLeaveTypesQuery(int PageNumber = 1, int Count = 10) : IRequest<IEnumerable<LeaveTypeDto>>;
     
 }

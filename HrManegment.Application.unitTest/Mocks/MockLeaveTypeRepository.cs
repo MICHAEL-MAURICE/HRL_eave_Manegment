@@ -33,7 +33,7 @@ namespace HR.LeaveManagement.Application.UnitTests.Mocks
 
             var mockRepo = new Mock<ILeaveTypeRepository>();
 
-            mockRepo.Setup(r => r.GetAsync()).ReturnsAsync(leaveTypes);
+            mockRepo.Setup(r => r.GetAsync(1,10)).ReturnsAsync(leaveTypes);
 
             mockRepo.Setup(r => r.CreateAsync(It.IsAny<LeaveType>()))
                 .Returns((LeaveType leaveType) =>

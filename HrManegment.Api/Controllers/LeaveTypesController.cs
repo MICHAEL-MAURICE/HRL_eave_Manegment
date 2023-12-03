@@ -26,9 +26,9 @@ namespace HrManegment.Api.Controllers
         }
         // GET: api/<LeaveTypesController>
         [HttpGet]
-        public async Task<ActionResult< List<LeaveTypeDto>>> Get()
+        public async Task<ActionResult< List<LeaveTypeDto>>> Get(int PageNumber = 1, int Count = 10)
         {
-            return Ok(await _mediator.Send(new GetLeaveTypesQuery()));
+            return Ok(await _mediator.Send(new GetLeaveTypesQuery(PageNumber,Count)));
         }
 
         // GET api/<LeaveTypesController>/5

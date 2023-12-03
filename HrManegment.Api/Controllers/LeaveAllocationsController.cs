@@ -53,7 +53,7 @@ public class LeaveAllocationsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(400)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    [ProducesDefaultResponseType]
+
     public async Task<ActionResult> Put(UpdateLeaveAllocationCommand leaveAllocation)
     {
         await _mediator.Send(leaveAllocation);
@@ -64,7 +64,7 @@ public class LeaveAllocationsController : ControllerBase
     [HttpDelete("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    [ProducesDefaultResponseType]
+    
     public async Task<ActionResult> Delete(Guid id)
     {
         var command = new DeleteLeaveAllocationCommand { Id = id };

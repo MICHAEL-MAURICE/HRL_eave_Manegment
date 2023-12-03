@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Zi9XLUvw5JBse9DkzBABig4jpL35W1gVPa61l1q6fzqfEbJ5JvnrMa0xD7gKLgw6CMeLFfYMYhFlffD/rAfHmA==",
+  "dgSpecHash": "MOG84DtosAGXcFbXU45DqY3+Z3dZPMXy2UGBgCFFI574ovRG3lRyOo91qNlZEQZa/vepPe7XFs1FgdfBCkTBDg==",
   "success": true,
   "projectFilePath": "C:\\Projects\\git\\HRL_eave_Manegment\\HrManegment.Api\\HrManegment.Api.csproj",
   "expectedPackageFiles": [
@@ -80,7 +80,7 @@
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
-    "C:\\Users\\Michael\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\sendgrid\\9.28.1\\sendgrid.9.28.1.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\serilog.aspnetcore\\8.0.0\\serilog.aspnetcore.8.0.0.nupkg.sha512",

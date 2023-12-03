@@ -10,6 +10,7 @@ namespace HR.LeaveManagement.Application.Contracts.Identity
     {
         Task<AuthResponse> Login(AuthRequest request);
         Task<RegistrationResponse> Register(RegistrationRequest request);
+        public Task<string> RefreshToken(string Token);
 
     }
 }
