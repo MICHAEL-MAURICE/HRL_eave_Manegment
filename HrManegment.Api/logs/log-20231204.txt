@@ -1,0 +1,218 @@
+2023-12-04 10:31:00.386 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 10:31:00.452 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 10:31:00.453 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 10:31:00.456 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 10:31:00.457 +02:00 [INF] Hosting environment: Development
+2023-12-04 10:31:00.457 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 10:31:14.124 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 10:31:14.204 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 10:31:14.206 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 10:31:14.208 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 10:31:14.209 +02:00 [INF] Hosting environment: Development
+2023-12-04 10:31:14.209 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 10:32:33.357 +02:00 [INF] HTTP GET /api/Auth/LogoutAllUsers responded 200 in 52589.7977 ms
+2023-12-04 10:33:00.495 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 10:33:00.551 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 10:33:00.552 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 10:33:00.554 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 10:33:00.554 +02:00 [INF] Hosting environment: Development
+2023-12-04 10:33:00.555 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 10:33:43.168 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 10:33:43.251 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 10:33:43.253 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 10:33:43.255 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 10:33:43.256 +02:00 [INF] Hosting environment: Development
+2023-12-04 10:33:43.257 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 10:36:43.029 +02:00 [INF] HTTP GET /api/Auth/LogoutAllUsers responded 200 in 155478.8977 ms
+2023-12-04 10:37:26.312 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 10:37:26.364 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 10:37:26.365 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 10:37:26.367 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 10:37:26.367 +02:00 [INF] Hosting environment: Development
+2023-12-04 10:37:26.368 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 10:39:39.795 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 10:39:39.865 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 10:39:39.867 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 10:39:39.869 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 10:39:39.870 +02:00 [INF] Hosting environment: Development
+2023-12-04 10:39:39.871 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 10:40:03.710 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 2352.0465 ms
+2023-12-04 10:43:18.883 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 1916.9849 ms
+2023-12-04 10:44:52.365 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 5592.9208 ms
+2023-12-04 10:45:33.757 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 10:45:33.759 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 10:45:33.802 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:45:33.810 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 3598.8407 ms
+2023-12-04 10:45:48.022 +02:00 [INF] HTTP GET /api/Auth/LogoutAllUsers responded 200 in 1555.2588 ms
+2023-12-04 10:45:58.519 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:45:58.520 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 3120.5411 ms
+2023-12-04 10:46:13.056 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:46:13.057 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 9197.7181 ms
+2023-12-04 10:46:29.438 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 1473.5346 ms
+2023-12-04 10:49:20.340 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 10:49:20.420 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 10:49:20.423 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 10:49:20.426 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 10:49:20.426 +02:00 [INF] Hosting environment: Development
+2023-12-04 10:49:20.427 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 10:49:31.610 +02:00 [INF] HTTP GET /api/Auth/LogoutAllUsers responded 200 in 4708.7479 ms
+2023-12-04 10:50:07.780 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 10:50:07.837 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 10:50:07.839 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 10:50:07.840 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 10:50:07.841 +02:00 [INF] Hosting environment: Development
+2023-12-04 10:50:07.841 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 10:50:33.552 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 4920.8084 ms
+2023-12-04 10:50:54.005 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 10:50:54.007 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 10:50:54.055 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:50:54.065 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 8180.7205 ms
+2023-12-04 10:51:05.095 +02:00 [INF] HTTP GET /api/Auth/LogoutAllUsers responded 200 in 1721.9328 ms
+2023-12-04 10:51:15.633 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:51:15.633 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 4774.6809 ms
+2023-12-04 10:51:23.959 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:51:23.960 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 3514.2980 ms
+2023-12-04 10:52:25.442 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 10:52:25.510 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 10:52:25.512 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 10:52:25.514 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 10:52:25.515 +02:00 [INF] Hosting environment: Development
+2023-12-04 10:52:25.515 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 10:52:35.155 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 2313.0750 ms
+2023-12-04 10:52:49.677 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 1507.0985 ms
+2023-12-04 10:53:13.843 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 3377.8751 ms
+2023-12-04 10:53:39.305 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 10:53:39.307 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 10:53:39.346 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:53:39.355 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 2887.3789 ms
+2023-12-04 10:53:50.758 +02:00 [INF] HTTP GET /api/Auth/LogoutAllUsers responded 200 in 2006.0012 ms
+2023-12-04 10:54:00.290 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:54:00.291 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 3157.9763 ms
+2023-12-04 10:54:09.348 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:54:09.349 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 3267.0406 ms
+2023-12-04 10:54:40.951 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:54:40.951 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 8081.5113 ms
+2023-12-04 10:54:51.189 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:54:51.190 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 4302.6135 ms
+2023-12-04 10:55:06.661 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:55:06.661 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 4403.3937 ms
+2023-12-04 10:56:34.736 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 10:56:34.737 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 3576.2364 ms
+2023-12-04 11:24:52.950 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 11:24:52.999 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 11:24:53.000 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 11:24:53.002 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 11:24:53.002 +02:00 [INF] Hosting environment: Development
+2023-12-04 11:24:53.003 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 11:25:31.167 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 5065.4802 ms
+2023-12-04 11:25:53.159 +02:00 [INF] HTTP POST /api/Auth/AddToCach responded 200 in 2506.0326 ms
+2023-12-04 12:16:05.967 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 12:16:06.038 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 12:16:06.040 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 12:16:06.041 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 12:16:06.042 +02:00 [INF] Hosting environment: Development
+2023-12-04 12:16:06.042 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 12:16:45.887 +02:00 [INF] HTTP POST /api/Auth/AddToCach responded 200 in 1834.2444 ms
+2023-12-04 12:18:24.408 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 21547.6845 ms
+2023-12-04 12:18:50.261 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 12:18:50.263 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 12:18:50.314 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 12:18:50.324 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 7307.4050 ms
+2023-12-04 12:19:49.245 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 12:19:49.334 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 12:19:49.336 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 12:19:49.338 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 12:19:49.339 +02:00 [INF] Hosting environment: Development
+2023-12-04 12:19:49.339 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 12:28:29.428 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 12:28:29.485 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 12:28:29.487 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 12:28:29.488 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 12:28:29.489 +02:00 [INF] Hosting environment: Development
+2023-12-04 12:28:29.490 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 12:30:15.663 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 12:30:15.723 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 12:30:15.724 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 12:30:15.726 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 12:30:15.726 +02:00 [INF] Hosting environment: Development
+2023-12-04 12:30:15.727 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 12:34:03.497 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 12:34:03.555 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 12:34:03.557 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 12:34:03.558 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 12:34:03.559 +02:00 [INF] Hosting environment: Development
+2023-12-04 12:34:03.559 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 12:35:25.520 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 12:35:25.577 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 12:35:25.578 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 12:35:25.580 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 12:35:25.580 +02:00 [INF] Hosting environment: Development
+2023-12-04 12:35:25.581 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 12:36:46.741 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 12:36:46.802 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 12:36:46.804 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 12:36:46.805 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 12:36:46.806 +02:00 [INF] Hosting environment: Development
+2023-12-04 12:36:46.806 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 12:37:17.510 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The request reached the end of the pipeline without executing the endpoint: 'HrManegment.Api.Controllers.AuthController.Login (HrManegment.Api)'. Please register the EndpointMiddleware using 'IApplicationBuilder.UseEndpoints(...)' if using routing.
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.<>c.<Build>b__18_0(HttpContext context)
+   at HrManegment.Api.Middleware.CheckUsersMiddleware.InvokeAsync(HttpContext httpContext) in C:\Projects\git\HRL_eave_Manegment\HrManegment.Api\Middleware\CheckUsersMiddleware.cs:line 60
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-12-04 12:38:16.975 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 12:38:17.049 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 12:38:17.051 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 12:38:17.053 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 12:38:17.054 +02:00 [INF] Hosting environment: Development
+2023-12-04 12:38:17.054 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 12:39:05.039 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 23937.4148 ms
+2023-12-04 12:39:28.390 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 12:39:28.392 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 12:39:28.429 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 12:39:28.440 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 3726.2450 ms
+2023-12-04 12:40:05.914 +02:00 [INF] HTTP POST /api/Auth/AddToCach responded 200 in 11179.2130 ms
+2023-12-04 12:41:03.508 +02:00 [INF] HTTP POST /api/Auth/AddToCach responded 200 in 49205.7253 ms
+2023-12-04 12:41:26.247 +02:00 [INF] HTTP POST /api/Auth/AddToCach responded 200 in 20160.4291 ms
+2023-12-04 12:42:09.468 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 34959.5081 ms
+2023-12-04 12:45:06.317 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 12:45:06.380 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 12:45:06.381 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 12:45:06.383 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 12:45:06.383 +02:00 [INF] Hosting environment: Development
+2023-12-04 12:45:06.384 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 12:45:35.823 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 12:45:35.826 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 12:45:36.316 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 12:45:36.339 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 21959.9417 ms
+2023-12-04 12:45:55.201 +02:00 [INF] HTTP POST /api/Auth/AddToCach responded 200 in 1613.2505 ms
+2023-12-04 12:46:39.233 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 33794.2282 ms
+2023-12-04 13:18:30.836 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 10491.1461 ms
+2023-12-04 13:19:42.798 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 3017.7249 ms
+2023-12-04 13:20:22.198 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 21171.9949 ms
+2023-12-04 13:20:36.616 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 5552.5738 ms
+2023-12-04 13:21:19.488 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 34640.2479 ms
+2023-12-04 13:22:23.290 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 59855.8406 ms
+2023-12-04 13:22:55.108 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 28505.0682 ms
+2023-12-04 13:24:55.994 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 13:24:55.996 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 28527.4265 ms
+2023-12-04 13:32:29.148 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2023-12-04 13:32:29.222 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 13:32:29.224 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 13:32:29.226 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 13:32:29.227 +02:00 [INF] Hosting environment: Development
+2023-12-04 13:32:29.228 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 13:32:51.932 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 4459.8687 ms
+2023-12-04 13:33:15.276 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 13:33:15.278 +02:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-12-04 13:33:15.321 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 13:33:15.330 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 3745.8359 ms
+2023-12-04 13:33:34.440 +02:00 [INF] HTTP POST /api/Auth/AddToCach responded 200 in 1932.1878 ms
+2023-12-04 13:33:43.645 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 2054.8610 ms
+2023-12-04 13:34:04.789 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 401 in 12826.0631 ms
+2023-12-04 13:34:20.778 +02:00 [INF] HTTP POST /api/Auth/login responded 200 in 8964.9083 ms
+2023-12-04 13:34:43.076 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 13:34:43.077 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 18911.3194 ms
+2023-12-04 13:35:38.002 +02:00 [INF] Leave types were retrieved successfully
+2023-12-04 13:35:38.002 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 3113.6455 ms

@@ -27,5 +27,31 @@ namespace HrManegment.Api.Controllers
         {
             return Ok(await _authenticationService.Register(request));
         }
+
+
+        [HttpGet("LogoutAllUsers")]
+        public ActionResult LogoutAllUsers()
+        {
+            _authenticationService.LogoutAllUsers();
+            return Ok();
+        }
+
+
+        [HttpGet("ClearCach")]
+        public ActionResult ClearCach()
+        {
+            _authenticationService.ClearCach();
+            return Ok();
+        }
+
+
+        [HttpPost("AddToCach")]
+        public ActionResult AddToCach(List<string> UsersId)
+        {
+            _authenticationService.AddToCash(UsersId);
+            return Ok();
+        }
+
+
     }
 }

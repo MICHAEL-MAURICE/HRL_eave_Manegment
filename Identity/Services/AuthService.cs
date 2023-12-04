@@ -3,7 +3,7 @@ using HR.LeaveManagement.Application.Contracts.Identity;
 using HR.LeaveManagement.Application.Exceptions;
 using HR.LeaveManagement.Application.Models.Identity;
 using HR.LeaveManagement.Domain;
-
+using HrManegment.Application.Model.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Caching.Memory;
@@ -25,18 +25,18 @@ namespace HR.LeaveManagement.Identity.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtSettings _jwtSettings;
-        private readonly IConfiguration _configuration;
-        private readonly IConfigurationRoot _configurationRoot;
+        private readonly IMemoryCache _memoryCache;
+
 
         public AuthService(UserManager<ApplicationUser> userManager,
             IOptions<JwtSettings> jwtSettings,
-            SignInManager<ApplicationUser> signInManager,IConfiguration configuration)
+            SignInManager<ApplicationUser> signInManager,  IMemoryCache memoryCache)
         {
             _userManager = userManager;
             _jwtSettings = jwtSettings.Value;
             _signInManager = signInManager;
-            _configuration = configuration;
-            _configurationRoot = (IConfigurationRoot)configuration;
+            _memoryCache = memoryCache;
+   
         }
 
         public async Task<AuthResponse> Login(AuthRequest request)
@@ -45,7 +45,13 @@ namespace HR.LeaveManagement.Identity.Services
             
             var user = await _userManager.FindByEmailAsync(request.Email);
 
-            if (user == null)
+            if (_memoryCache.TryGetValue("LogOutUsers", out LogoutCachingData CurrentData))
+            {
+
+                CurrentData.UsersId.Remove(user.Id);
+
+            }
+                if (user == null)
             {
                 throw new NotFoundException($"User with {request.Email} not found.", request.Email);
             }
@@ -114,12 +120,16 @@ namespace HR.LeaveManagement.Identity.Services
 
             var roleClaims = roles.Select(q => new Claim(ClaimTypes.Role, q)).ToList();
 
-            var claims = new[]
+            _memoryCache.TryGetValue("LogoutCachingData", out LogoutCachingData cachedData);
+            
+
+                var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                new Claim("uid", user.Id)
+                new Claim("uid", user.Id),
+               
             }
             .Union(userClaims)
             .Union(roleClaims);
@@ -138,6 +148,36 @@ namespace HR.LeaveManagement.Identity.Services
         }
 
 
+        public void AddToCash(List<string>Users)
+        {
+
+            if (!_memoryCache.TryGetValue("LogOutUsers", out LogoutCachingData CurrentData))
+            {
+
+                var CashingData = new LogoutCachingData()
+                {
+                    UsersId = Users
+                    
+                };
+
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.NeverRemove);
+
+                
+                _memoryCache.Set("LogOutUsers", CashingData, cacheEntryOptions);
+            }
+       
+
+        }
+
+
+        public void ClearCach()
+        {
+            _memoryCache.Remove("LogOutUsers");
+        }
+
+
+
         public async Task<string> RefreshToken(string Token)
         {
             var jwt = new JwtSecurityTokenHandler().ReadJwtToken(Token);
@@ -154,7 +194,7 @@ namespace HR.LeaveManagement.Identity.Services
 
          public async void LogoutAllUsers()
         {
-            var filePath = Path.Combine(AppContext.BaseDirectory, "appSettings.json");
+            var filePath = Path.Combine("C:\\Projects\\git\\HRL_eave_Manegment\\HrManegment.Api", "appSettings.json");
 
          
 
@@ -170,9 +210,9 @@ namespace HR.LeaveManagement.Identity.Services
 
 
 
+            var x = jsonObj["JwtSettings"]["Audience"];
 
-
-            jsonObj["JwtSettings"]["Key"] = GenerateKeyForJwt();
+            jsonObj["JwtSettings"]["Audience"] = x+1;
 
             
 
