@@ -1,6 +1,8 @@
 ﻿using HR.LeaveManagement.Application.Models.Identity;
+using HR.LeaveManagement.Domain;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +12,7 @@ namespace HR.LeaveManagement.Application.Contracts.Identity
     {
         Task<AuthResponse> Login(AuthRequest request);
         Task<RegistrationResponse> Register(RegistrationRequest request);
-        public Task<string> RefreshToken(string Token);
+        public Task<(JwtSecurityToken, string)> RefreshToken(ApplicationUser user, string userJwtToken, string storedJwtToken, string userRefreshToken, string storedRefreshToken);
         public void AddToCash(List<string> Users);
         public void ClearCach();
         public  void LogoutAllUsers();

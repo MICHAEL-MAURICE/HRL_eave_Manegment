@@ -14,6 +14,7 @@ using Microsoft.VisualBasic;
 using System.CodeDom.Compiler;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -63,14 +64,16 @@ namespace HR.LeaveManagement.Identity.Services
                 throw new BadRequestException($"Credentials for '{request.Email} aren't valid'.");
             }
 
-            JwtSecurityToken jwtSecurityToken = await GenerateToken(user);
+            var jwtSecurityToken = await GenerateToken(user);
 
             var response = new AuthResponse
             {
                 Id = user.Id,
-                Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
+                Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken.Item1),
                 Email = user.Email,
-                UserName = user.UserName
+                UserName = user.UserName,
+                RefreshToken= jwtSecurityToken.Item2
+
             };
 
           
@@ -79,6 +82,44 @@ namespace HR.LeaveManagement.Identity.Services
 
             return response;
         }
+
+    
+
+       
+public async Task<(JwtSecurityToken, string)> RefreshToken(  string userRefreshToken)
+
+        {
+            var userId = getUserId(userRefreshToken);
+            var storedRefreshToken = "";
+
+            bool isValid = TokenChecker( userRefreshToken, storedRefreshToken);
+          
+
+            if (isValid)
+
+            {
+
+                var jwtSecurityToken = await GeneratejwtToken(userId);
+                string refreshToken = RefreshTokenGen(userId);
+
+                StoreRefreshtoken(refreshToken);
+
+                return (jwtSecurityToken, refreshToken);
+
+            }
+
+            else
+
+            {
+
+                throw new ApplicationException("Invalid tokens provided");
+
+            }
+
+        }
+
+
+       
 
 
         public async Task<RegistrationResponse> Register(RegistrationRequest request)
@@ -111,41 +152,7 @@ namespace HR.LeaveManagement.Identity.Services
             }
         }
 
-        private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
-        {
-
-           
-            var userClaims = await _userManager.GetClaimsAsync(user);
-            var roles = await _userManager.GetRolesAsync(user);
-
-            var roleClaims = roles.Select(q => new Claim(ClaimTypes.Role, q)).ToList();
-
-            _memoryCache.TryGetValue("LogoutCachingData", out LogoutCachingData cachedData);
-            
-
-                var claims = new[]
-            {
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Email, user.Email),
-                new Claim("uid", user.Id),
-               
-            }
-            .Union(userClaims)
-            .Union(roleClaims);
-
-            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
-
-            var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
-
-            var jwtSecurityToken = new JwtSecurityToken(
-               issuer: _jwtSettings.Issuer,
-               audience: _jwtSettings.Audience,
-               claims: claims,
-               expires: DateTime.Now.AddMinutes(_jwtSettings.DurationInMinutes),
-               signingCredentials: signingCredentials);
-            return jwtSecurityToken;
-        }
+      
 
 
         public void AddToCash(List<string>Users)
@@ -170,6 +177,52 @@ namespace HR.LeaveManagement.Identity.Services
 
         }
 
+        private string GetStoredRefreshtoken(string userId)
+        {
+            if (_memoryCache.TryGetValue("RefreshToken", out Dictionary<string, List<string>> Refresh))
+            {
+                return Refresh[userId].First();
+            }
+            
+        }
+        private void StoreRefreshtoken(string RefreshToken)
+        {
+            if (!_memoryCache.TryGetValue("RefreshToken", out Dictionary<string,string>Refresh))
+            {
+
+                var userId = getUserId(RefreshToken);
+
+               
+                Refresh[userId].Add(RefreshToken);
+
+                  var cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.Normal);
+
+
+                _memoryCache.Set("RefreshToken", Refresh, cacheEntryOptions);
+            }
+            else
+            {
+
+                var userId = getUserId(RefreshToken);
+
+                if (Refresh[userId]!=null)
+                {
+                    Refresh.Remove(userId);
+                }
+                else
+                    Refresh[userId]=RefreshToken;
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.Normal);
+
+
+                _memoryCache.Set("RefreshToken", Refresh, cacheEntryOptions);
+
+            }
+
+        }
+
+
+
 
         public void ClearCach()
         {
@@ -178,18 +231,18 @@ namespace HR.LeaveManagement.Identity.Services
 
 
 
-        public async Task<string> RefreshToken(string Token)
-        {
-            var jwt = new JwtSecurityTokenHandler().ReadJwtToken(Token);
-            string userId = jwt.Claims.First(c => c.Type == "uid").Value;
+        //public async Task<string> RefreshToken(string Token)
+        //{
+        //    var jwt = new JwtSecurityTokenHandler().ReadJwtToken(Token);
+        //    string userId = jwt.Claims.First(c => c.Type == "uid").Value;
            
            
-            var user = await _userManager.FindByIdAsync(userId);
+        //    var user = await _userManager.FindByIdAsync(userId);
 
-            var NewToken  =  await GenerateToken(user);
+        //    var NewToken  =  await GenerateToken(user);
                      
-            return  new JwtSecurityTokenHandler().WriteToken(NewToken);
-        }
+        //    return  new JwtSecurityTokenHandler().WriteToken(NewToken);
+        //}
 
 
          public async void LogoutAllUsers()
@@ -238,6 +291,114 @@ string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.
         }
 
 
+        private string getUserId(string RefreshToken)
+        {
+            int dollarIndex = RefreshToken.IndexOf('$');
+            if (dollarIndex != -1)
+            {
+                return RefreshToken.Substring(dollarIndex);
+            }
+            return "";
+        }
+
+
+        private string RefreshTokenGen(string id)
+        {
+            var rng = RandomNumberGenerator.Create();
+
+            byte[] refreshTokenBytes = new byte[32];
+
+            rng.GetBytes(refreshTokenBytes);
+
+            string refreshToken = Convert.ToBase64String(refreshTokenBytes)
+
+                .TrimEnd('=')
+
+                .Replace('+', '-')
+
+                .Replace('/', '_');
+            refreshToken += '$' + id;
+
+            return refreshToken;
+        }
+
+
+        private async Task<JwtSecurityToken> GeneratejwtToken(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            var userClaims = await _userManager.GetClaimsAsync(user);
+
+            var roles = await _userManager.GetRolesAsync(user);
+
+            var roleClaims = roles.Select(q => new Claim(ClaimTypes.Role, q)).ToList();
+
+            _memoryCache.TryGetValue("LogoutCachingData", out LogoutCachingData cachedData);
+
+
+            var claims = new[]
+
+        {
+
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+
+                new Claim("uid", user.Id),
+
+            }
+
+        .Union(userClaims)
+
+        .Union(roleClaims);
+
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
+
+            var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
+
+            var jwtSecurityToken = new JwtSecurityToken(
+
+               issuer: _jwtSettings.Issuer,
+
+               audience: _jwtSettings.Audience,
+
+               claims: claims,
+
+               expires: DateTime.Now.AddMinutes(_jwtSettings.DurationInMinutes),
+
+               signingCredentials: signingCredentials);
+
+
+            return jwtSecurityToken;
+        }
+
+
+
+        private async Task<(JwtSecurityToken, string)> GenerateToken(string userId)
+
+        {
+
+            var jwtSecurityToken = await GeneratejwtToken(userId);
+
+            string refreshToken = RefreshTokenGen(userId);
+
+            StoreRefreshtoken(refreshToken);
+
+            return (jwtSecurityToken, refreshToken);
+
+        }
+
+
+        private bool TokenChecker(string userRefreshToken, string storedRefreshToken)
+
+        {
+
+            return userRefreshToken == storedRefreshToken;
+
+
+
+        }
 
 
     }
