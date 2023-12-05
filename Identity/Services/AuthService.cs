@@ -75,24 +75,26 @@ namespace HR.LeaveManagement.Identity.Services
                 RefreshToken= jwtSecurityToken.Item2
 
             };
+            
 
           
 
            
 
             return response;
+
         }
 
     
 
        
-public async Task<(JwtSecurityToken, string)> RefreshToken(string userRefreshToken)
+public async Task<(string, string)> RefreshToken(string userRefreshToken)
 
         {
             var userId = getUserId(userRefreshToken);
-            var storedRefreshToken = "";
+            var storedRefreshToken = GetStoredRefreshtoken(userId);
 
-            bool isValid = TokenChecker( userRefreshToken, storedRefreshToken);
+            bool isValid = TokenChecker(userRefreshToken, storedRefreshToken);
           
 
             if (isValid)
@@ -100,11 +102,14 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(string userRefreshTok
             {
 
                 var jwtSecurityToken = await GeneratejwtToken(userId);
+               var jToken= new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
                 string refreshToken = RefreshTokenGen(userId);
 
                 StoreRefreshtoken(refreshToken);
 
-                return (jwtSecurityToken, refreshToken);
+
+
+                return  (jToken, refreshToken);
 
             }
 
@@ -179,9 +184,9 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(string userRefreshTok
 
         private string GetStoredRefreshtoken(string userId)
         {
-            if (_memoryCache.TryGetValue("RefreshToken", out Dictionary<string, List<string>> Refresh))
+            if (_memoryCache.TryGetValue("RefreshToken", out Dictionary<string, string> Refresh))
             {
-                return Refresh[userId].First();
+                return Refresh[userId];
             }
             else return "";
             
@@ -192,9 +197,10 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(string userRefreshTok
             {
 
                 var userId = getUserId(RefreshToken);
+                Refresh = new Dictionary<string, string>();
 
-               
-                Refresh[userId]=RefreshToken;
+
+                Refresh.Add(userId,RefreshToken);
 
                   var cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.Normal);
 
@@ -210,8 +216,8 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(string userRefreshTok
                 {
                     Refresh.Remove(userId);
                 }
-                else
-                    Refresh[userId]=RefreshToken;
+                
+                    Refresh.Add(userId, RefreshToken);
 
                 var cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.Normal);
 
@@ -293,7 +299,7 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(string userRefreshTok
 
         private string getUserId(string RefreshToken)
         {
-            int dollarIndex = RefreshToken.IndexOf('$');
+            int dollarIndex = RefreshToken.IndexOf('$')+1;
             if (dollarIndex != -1)
             {
                 return RefreshToken.Substring(dollarIndex);
