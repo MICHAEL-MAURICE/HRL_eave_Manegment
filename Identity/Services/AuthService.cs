@@ -64,7 +64,7 @@ namespace HR.LeaveManagement.Identity.Services
                 throw new BadRequestException($"Credentials for '{request.Email} aren't valid'.");
             }
 
-            var jwtSecurityToken = await GenerateToken(user);
+            var jwtSecurityToken = await GenerateToken(user.Id);
 
             var response = new AuthResponse
             {
@@ -183,7 +183,8 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(  string userRefreshT
             {
                 return Refresh[userId].First();
             }
-            
+
+            return "";
         }
         private void StoreRefreshtoken(string RefreshToken)
         {
@@ -191,9 +192,10 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(  string userRefreshT
             {
 
                 var userId = getUserId(RefreshToken);
+               Refresh = new Dictionary<string, string>();
 
-               
-                Refresh[userId].Add(RefreshToken);
+
+                Refresh.Add(userId,RefreshToken);
 
                   var cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.Normal);
 
@@ -400,6 +402,9 @@ string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.
 
         }
 
-
+        public Task<(JwtSecurityToken, string)> RefreshToken(ApplicationUser user, string userJwtToken, string storedJwtToken, string userRefreshToken, string storedRefreshToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

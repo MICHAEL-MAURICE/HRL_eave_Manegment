@@ -27,7 +27,7 @@ namespace HrManegment.Api.Middleware
         }
 
         public async Task InvokeAsync(HttpContext httpContext)
-        {
+         {
             var controllerName = httpContext.GetRouteData()?.Values["controller"]?.ToString();
 
             // Check if the controller is the one you want to exclude

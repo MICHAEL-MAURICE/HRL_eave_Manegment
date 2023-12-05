@@ -70,7 +70,9 @@ namespace HR.LeaveManagement.Api.Middleware
             httpContext.Response.StatusCode = (int)statusCode;
             var logMessage = JsonConvert.SerializeObject(problem);
             _logger.LogError(logMessage);
-            await httpContext.Response.WriteAsJsonAsync(problem);
+           
+
+             await httpContext.Response.WriteAsJsonAsync(problem);
 
         }
     }
