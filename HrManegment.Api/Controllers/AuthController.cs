@@ -1,5 +1,6 @@
 ﻿using HR.LeaveManagement.Application.Contracts.Identity;
 using HR.LeaveManagement.Application.Models.Identity;
+using HR.LeaveManagement.Identity.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -52,6 +53,20 @@ namespace HrManegment.Api.Controllers
             return Ok();
         }
 
+        [HttpPost("refresh-token")]
+        public async Task<IActionResult> RefreshToken([FromBody] string userRefreshToken)
+        {
+            try
+            {
+                var result = await _authenticationService.RefreshToken(userRefreshToken);
+                return Ok(result);
+            }
+            catch (ApplicationException ex)
+            {
+                return BadRequest(ex.Message);
 
+            }
+
+        }
     }
 }

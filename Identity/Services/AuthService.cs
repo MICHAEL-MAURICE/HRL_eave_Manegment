@@ -64,7 +64,7 @@ namespace HR.LeaveManagement.Identity.Services
                 throw new BadRequestException($"Credentials for '{request.Email} aren't valid'.");
             }
 
-            var jwtSecurityToken = await GenerateToken(user);
+            var jwtSecurityToken = await GenerateToken(user.Id);
 
             var response = new AuthResponse
             {
@@ -86,7 +86,7 @@ namespace HR.LeaveManagement.Identity.Services
     
 
        
-public async Task<(JwtSecurityToken, string)> RefreshToken(  string userRefreshToken)
+public async Task<(JwtSecurityToken, string)> RefreshToken(string userRefreshToken)
 
         {
             var userId = getUserId(userRefreshToken);
@@ -183,6 +183,7 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(  string userRefreshT
             {
                 return Refresh[userId].First();
             }
+            else return "";
             
         }
         private void StoreRefreshtoken(string RefreshToken)
@@ -193,7 +194,7 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(  string userRefreshT
                 var userId = getUserId(RefreshToken);
 
                
-                Refresh[userId].Add(RefreshToken);
+                Refresh[userId]=RefreshToken;
 
                   var cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.Normal);
 
@@ -267,12 +268,11 @@ public async Task<(JwtSecurityToken, string)> RefreshToken(  string userRefreshT
 
             jsonObj["JwtSettings"]["Audience"] = x+1;
 
-            
 
 
-          
 
-string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+
+            string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
 
             File.WriteAllText(filePath, output);
         }
@@ -375,7 +375,7 @@ string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.
 
 
 
-        private async Task<(JwtSecurityToken, string)> GenerateToken(string userId)
+        private async Task<(JwtSecurityToken, string)> GenerateToken(string userId) //public?
 
         {
 

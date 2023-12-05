@@ -1,0 +1,21 @@
+2023-12-05 12:00:57.557 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-05 12:00:57.590 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-05 12:00:57.596 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-05 12:00:57.600 +02:00 [INF] Hosting environment: Development
+2023-12-05 12:00:57.601 +02:00 [INF] Content root path: C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Api
+2023-12-05 12:01:13.350 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-05 12:01:13.379 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-05 12:01:13.393 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-05 12:01:13.395 +02:00 [INF] Hosting environment: Development
+2023-12-05 12:01:13.395 +02:00 [INF] Content root path: C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Api
+2023-12-05 12:01:19.587 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-05 12:01:19.626 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-05 12:01:19.631 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-05 12:01:19.633 +02:00 [INF] Hosting environment: Development
+2023-12-05 12:01:19.634 +02:00 [INF] Content root path: C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Api
+2023-12-05 12:03:34.357 +02:00 [ERR] Failed executing DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Hr];
+2023-12-05 12:04:43.418 +02:00 [ERR] Failed executing DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Hr];
+2023-12-05 12:06:33.646 +02:00 [ERR] Failed executing DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Hr];
