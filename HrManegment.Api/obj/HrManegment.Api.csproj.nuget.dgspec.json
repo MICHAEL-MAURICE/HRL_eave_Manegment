@@ -486,6 +486,9 @@
             "projectReferences": {
               "C:\\Projects\\HrLastVersion\\HrManegment.Application\\HrManegment.Application.csproj": {
                 "projectPath": "C:\\Projects\\HrLastVersion\\HrManegment.Application\\HrManegment.Application.csproj"
+              },
+              "C:\\Projects\\HrLastVersion\\HrManegment.Persistence\\HrManagement.Persistence.csproj": {
+                "projectPath": "C:\\Projects\\HrLastVersion\\HrManegment.Persistence\\HrManagement.Persistence.csproj"
               }
             }
           }

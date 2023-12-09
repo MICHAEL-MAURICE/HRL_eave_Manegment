@@ -39,6 +39,20 @@ namespace HrManegment.Api.Controllers
         //}
 
 
+        [HttpPost("BlockUser")]
+        public ActionResult<string> BlockUser( string Id)
+        {
+            return Ok(_authenticationService.BlockUser(Id));
+
+        }
+
+        [HttpPost("UnBlockUser")]
+        public ActionResult<string> UnBlockUser(string Id)
+        {
+            return Ok(_authenticationService.UnBlockUser(Id));
+
+        }
+
         [HttpDelete("ClearCach")]
         public ActionResult ClearCach()
         {

@@ -38,10 +38,10 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequest.Commands.CancelLe
             if (leaveRequest.Approved == true)
             {
                 int daysRequested = (int)(leaveRequest.EndDate - leaveRequest.StartDate).TotalDays;
-                var allocation = await _leaveAllocationRepository.GetUserAllocations(leaveRequest.RequestingEmployeeId, leaveRequest.LeaveTypeId);
-                allocation.NumberOfDays += daysRequested;
+              //  var allocation = await _leaveAllocationRepository.GetUserAllocations(leaveRequest.RequestingEmployeeId, leaveRequest.LeaveTypeId);
+                //allocation.NumberOfDays += daysRequested;
 
-                await _leaveAllocationRepository.UpdateAsync(allocation);
+//                await _leaveAllocationRepository.UpdateAsync(allocation);
             }
 
 

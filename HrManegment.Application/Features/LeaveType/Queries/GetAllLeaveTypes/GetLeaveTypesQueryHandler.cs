@@ -29,8 +29,9 @@ namespace HrManegment.Application.Features.LeaveType.Queries.GetAllLeaveTypes
         public async Task<IEnumerable<LeaveTypeDto>> Handle(GetLeaveTypesQuery request, CancellationToken cancellationToken)
         {
 
-           
+
             // Query the database
+            _logger.LogInformation($"request={@request}");
             var leaveTypes = await _leaveTypeRepository.GetAsync(request.PageNumber,request.Count);
             if(leaveTypes == null )
             {

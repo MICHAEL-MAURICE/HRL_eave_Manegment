@@ -4,6 +4,7 @@ using HrManegment.Persistence.DatabaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HrManagement.Persistence.Migrations
 {
     [DbContext(typeof(HrDatabaseContext))]
-    partial class HrDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20231209194621_addIsActiveToApplicationUser")]
+    partial class addIsActiveToApplicationUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -102,7 +105,7 @@ namespace HrManagement.Persistence.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e5727a3d-4df6-4c04-9b2e-12d078a50bf2",
+                            ConcurrencyStamp = "791c2dd6-0868-4829-a2d6-fa0a335cdb8d",
                             Email = "admin@localhost.com",
                             EmailConfirmed = true,
                             FirstName = "System",
@@ -110,9 +113,9 @@ namespace HrManagement.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPs0IgevwiElh/ImAOqGPx/yi8AFVIVh+y0vutLKxH8WawpKzW4hi1cgh0Zd/T/leg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEE2Gntw4w5q+p95Bw7R1CT61uw1AXAvvjc7Yw063Egz0DfKk/Obt2boPudkHzg/zZQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7d798622-361c-40c5-8c58-f2c41313efcb",
+                            SecurityStamp = "abc20f43-0acf-4d12-a1c0-cea7f7f120f8",
                             TwoFactorEnabled = false,
                             UserName = "admin@localhost.com"
                         },
@@ -120,7 +123,7 @@ namespace HrManagement.Persistence.Migrations
                         {
                             Id = "9e224968-33e4-4652-b7b7-8574d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5e5ecd16-daab-4169-96e9-3327cd721ea8",
+                            ConcurrencyStamp = "61dac0fe-7778-4561-a3d9-61c17cd510c3",
                             Email = "user@localhost.com",
                             EmailConfirmed = true,
                             FirstName = "System",
@@ -128,9 +131,9 @@ namespace HrManagement.Persistence.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@LOCALHOST.COM",
                             NormalizedUserName = "USER@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEG76DeUnqgwDlmO6nMKN6XUfUzjsDrel5JUqPQny53YgDl7QT6jw0589aE0VVw9lSQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPsfS60mx5NBp2S+PEJbdYgNzVoNk1K2LDuMy0+SuKWXEkGw9lF4Km4l4GcHNpETbg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cf54aa99-6ede-4e43-9d88-d3e189e5dd82",
+                            SecurityStamp = "4b6fc909-3fa6-4d66-95b5-21bbf550e397",
                             TwoFactorEnabled = false,
                             UserName = "user@localhost.com"
                         });
@@ -201,9 +204,6 @@ namespace HrManagement.Persistence.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("LeaveTypeId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
@@ -218,8 +218,6 @@ namespace HrManagement.Persistence.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("LeaveTypeId");
 
                     b.ToTable("LeaveRequests");
                 });
@@ -257,9 +255,9 @@ namespace HrManagement.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("fb12b38f-5869-471d-b86a-42805df5e640"),
-                            DateCreated = new DateTime(2023, 12, 9, 21, 47, 18, 773, DateTimeKind.Local).AddTicks(9190),
-                            DateModified = new DateTime(2023, 12, 9, 21, 47, 18, 773, DateTimeKind.Local).AddTicks(9257),
+                            Id = new Guid("6a6322bc-184d-4a87-9898-96af9c44a87a"),
+                            DateCreated = new DateTime(2023, 12, 9, 21, 46, 21, 359, DateTimeKind.Local).AddTicks(168),
+                            DateModified = new DateTime(2023, 12, 9, 21, 46, 21, 359, DateTimeKind.Local).AddTicks(229),
                             DefaultDays = 10,
                             Name = "Vacation"
                         });
@@ -425,17 +423,6 @@ namespace HrManagement.Persistence.Migrations
                 });
 
             modelBuilder.Entity("HR.LeaveManagement.Domain.LeaveAllocation", b =>
-                {
-                    b.HasOne("HR.LeaveManagement.Domain.LeaveType", "LeaveType")
-                        .WithMany()
-                        .HasForeignKey("LeaveTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("LeaveType");
-                });
-
-            modelBuilder.Entity("HR.LeaveManagement.Domain.LeaveRequest", b =>
                 {
                     b.HasOne("HR.LeaveManagement.Domain.LeaveType", "LeaveType")
                         .WithMany()

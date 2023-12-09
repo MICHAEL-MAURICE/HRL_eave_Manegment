@@ -4,6 +4,7 @@ using HR.LeaveManagement.Application.Exceptions;
 using HR.LeaveManagement.Application.Models.Identity;
 using HR.LeaveManagement.Domain;
 using HrManegment.Application.Model.Identity;
+using HrManegment.Persistence.DatabaseContext;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Caching.Memory;
@@ -27,16 +28,18 @@ namespace HR.LeaveManagement.Identity.Services
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtSettings _jwtSettings;
         private readonly IMemoryCache _memoryCache;
+        private readonly HrDatabaseContext _context;
 
 
         public AuthService(UserManager<ApplicationUser> userManager,
             IOptions<JwtSettings> jwtSettings,
-            SignInManager<ApplicationUser> signInManager,  IMemoryCache memoryCache)
+            SignInManager<ApplicationUser> signInManager,  IMemoryCache memoryCache,HrDatabaseContext context)
         {
             _userManager = userManager;
             _jwtSettings = jwtSettings.Value;
             _signInManager = signInManager;
             _memoryCache = memoryCache;
+            _context = context;
    
         }
 
@@ -50,6 +53,12 @@ namespace HR.LeaveManagement.Identity.Services
             {
                 throw new NotFoundException($"User with {request.Email} not found.", request.Email);
             }
+
+            if (user.IsActive == false)
+            {
+                throw new UnauthorizedAccessException("You are not authorized to access this resource.");
+            }
+        
 
             var result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
 
@@ -201,6 +210,37 @@ public async Task<(string, string)> RefreshToken(string userRefreshToken)
 
         }
 
+
+
+        public string BlockUser(string UserId)
+        {
+            var userStatus =_context.Users.Where(user=>user.Id== UserId).Select(user=>user.IsActive).FirstOrDefault();
+            if (userStatus != null)
+            {
+                userStatus = false;
+                _context.SaveChanges();
+                return "This User Is UnActive now";
+            }
+
+            return "We Not Found This User";
+
+        }
+
+
+
+        public string UnBlockUser(string UserId)
+        {
+            var userStatus = _context.Users.Where(user => user.Id == UserId).Select(user => user.IsActive).FirstOrDefault();
+            if (userStatus != null)
+            {
+                userStatus = true;
+                _context.SaveChanges();
+                return "This User Is Active now";
+            }
+
+            return "We Not Found This User";
+
+        }
         private string GetStoredRefreshtoken(string userId)
         {
             if (_memoryCache.TryGetValue("RefreshToken", out Dictionary<string, string> Refresh))
@@ -425,6 +465,6 @@ public async Task<(string, string)> RefreshToken(string userRefreshToken)
 
         }
 
-
+      
     }
 }

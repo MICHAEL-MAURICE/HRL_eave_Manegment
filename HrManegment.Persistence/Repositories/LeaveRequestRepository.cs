@@ -21,7 +21,7 @@ namespace HrManegment.Persistence.Repositories
         {
             var leaveRequests = await _context.LeaveRequests
                  .Where(q => !string.IsNullOrEmpty(q.RequestingEmployeeId))
-                .Include(q => q.LeaveType)
+                //.Include(q => q.LeaveType)
                 .ToListAsync();
             return leaveRequests;
         }
@@ -30,7 +30,7 @@ namespace HrManegment.Persistence.Repositories
         {
             var leaveRequests = await _context.LeaveRequests
                 .Where(q => q.RequestingEmployeeId == userId)
-                .Include(q => q.LeaveType)
+                //.Include(q => q.LeaveType)
                 .ToListAsync();
             return leaveRequests;
         }
@@ -38,7 +38,7 @@ namespace HrManegment.Persistence.Repositories
         public async Task<LeaveRequest> GetLeaveRequestWithDetails(Guid id)
         {
             var leaveRequest = await _context.LeaveRequests
-                .Include(q => q.LeaveType)
+                //.Include(q => q.LeaveType)
                 .FirstOrDefaultAsync(q => q.Id == id);
 
             return leaveRequest;

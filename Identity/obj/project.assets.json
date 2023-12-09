@@ -1775,6 +1775,24 @@
           "bin/placeholder/HR.LeaveManagement.Domain.dll": {}
         }
       },
+      "HrManagement.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "HR.LeaveManagement.Domain": "1.0.0",
+          "HrManegment.Application": "1.0.0",
+          "Microsoft.AspNetCore.Identity": "2.1.39",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.11",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HrManagement.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HrManagement.Persistence.dll": {}
+        }
+      },
       "HrManegment.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -4723,6 +4741,11 @@
       "path": "../HR.LeaveManagement.Domain/HR.LeaveManagement.Domain.csproj",
       "msbuildProject": "../HR.LeaveManagement.Domain/HR.LeaveManagement.Domain.csproj"
     },
+    "HrManagement.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../HrManegment.Persistence/HrManagement.Persistence.csproj",
+      "msbuildProject": "../HrManegment.Persistence/HrManagement.Persistence.csproj"
+    },
     "HrManegment.Application/1.0.0": {
       "type": "project",
       "path": "../HrManegment.Application/HrManegment.Application.csproj",
@@ -4731,6 +4754,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "HrManagement.Persistence >= 1.0.0",
       "HrManegment.Application >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.10",
       "Microsoft.AspNetCore.Identity >= 2.1.39",
@@ -4776,6 +4800,9 @@
           "projectReferences": {
             "C:\\Projects\\HrLastVersion\\HrManegment.Application\\HrManegment.Application.csproj": {
               "projectPath": "C:\\Projects\\HrLastVersion\\HrManegment.Application\\HrManegment.Application.csproj"
+            },
+            "C:\\Projects\\HrLastVersion\\HrManegment.Persistence\\HrManagement.Persistence.csproj": {
+              "projectPath": "C:\\Projects\\HrLastVersion\\HrManegment.Persistence\\HrManagement.Persistence.csproj"
             }
           }
         }
@@ -4840,5 +4867,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Detected package downgrade: Microsoft.EntityFrameworkCore.SqlServer from 7.0.10 to 7.0.7. Reference the package directly from the project to select a different version. \r\n Identity -> HrManagement.Persistence -> Microsoft.EntityFrameworkCore.SqlServer (>= 7.0.10) \r\n Identity -> Microsoft.EntityFrameworkCore.SqlServer (>= 7.0.7)",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

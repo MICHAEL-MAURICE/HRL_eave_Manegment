@@ -17,13 +17,13 @@ namespace HrManegment.Api.Controllers
     public class LeaveTypesController : ControllerBase
     {
 
-        private readonly IMediator _mediator;
-
+       private readonly IMediator _mediator;
 
         public LeaveTypesController(IMediator mediator)
         {
-            _mediator = mediator;
+                _mediator= mediator;
         }
+       
         // GET: api/<LeaveTypesController>
         [HttpGet]
         public async Task<ActionResult< List<LeaveTypeDto>>> Get(int PageNumber = 1, int Count = 10)

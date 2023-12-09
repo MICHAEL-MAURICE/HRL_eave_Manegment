@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HrManegment.Application\HrManegment.Application.csproj" />
+    <ProjectReference Include="..\HrManegment.Persistence\HrManagement.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

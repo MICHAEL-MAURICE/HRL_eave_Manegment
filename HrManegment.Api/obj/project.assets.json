@@ -2266,6 +2266,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "HrManagement.Persistence": "1.0.0",
           "HrManegment.Application": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.10",
           "Microsoft.AspNetCore.Identity": "2.1.39",
