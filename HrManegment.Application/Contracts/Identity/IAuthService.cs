@@ -13,7 +13,7 @@ namespace HR.LeaveManagement.Application.Contracts.Identity
         Task<AuthResponse> Login(AuthRequest request);
         Task<RegistrationResponse> Register(RegistrationRequest request);
         public Task<(string, string)> RefreshToken(string userRefreshToken);
-        public void AddToCash(List<string> Users);
+        public List<string> AddToCash(List<string> Users);
         public void ClearCach();
         public  void LogoutAllUsers();
 

@@ -48,10 +48,10 @@ namespace HrManegment.Api.Controllers
 
 
         [HttpPost("AddToCach")]
-        public ActionResult AddToCach(List<string> UsersId)
+        public ActionResult<List<string>> AddToCach(List<string> UsersId)
         {
-            _authenticationService.AddToCash(UsersId);
-            return Ok();
+            
+            return Ok(_authenticationService.AddToCash(UsersId));
         }
 
         [HttpPost("refresh-token")]

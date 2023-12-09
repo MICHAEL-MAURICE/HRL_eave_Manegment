@@ -9,6 +9,6 @@ namespace HrManegment.Application.Model.Identity
     public class LogoutCachingData
     {
         
-        public List<string> UsersId { get; set; }
+        public HashSet<string> UsersId { get; set; }
     }
 }

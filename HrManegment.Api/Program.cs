@@ -6,8 +6,7 @@ using HR.LeaveManagement.Infrastructure;
 using HrManegment.Api.Middleware;
 using HrManegment.Application;
 using HrManegment.Persistence;
-using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.HttpOverrides;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,7 +27,10 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
 
 builder.Services.AddControllers();
-
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+});
 
 builder.Services.AddCors(options =>
 {
@@ -56,7 +58,7 @@ if (app.Environment.IsDevelopment())
 
 
 
-
+app.UseForwardedHeaders();
 
 app.UseSerilogRequestLogging();
 app.UseMiddleware<CheckUsersMiddleware>();

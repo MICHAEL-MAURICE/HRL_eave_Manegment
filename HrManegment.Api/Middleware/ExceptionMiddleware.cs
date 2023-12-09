@@ -20,6 +20,7 @@ namespace HR.LeaveManagement.Api.Middleware
         {
             try
             {
+
                 await _next(httpContext);
             }
             catch (Exception ex)

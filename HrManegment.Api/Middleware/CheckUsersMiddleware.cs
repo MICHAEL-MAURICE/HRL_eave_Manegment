@@ -23,7 +23,7 @@ namespace HrManegment.Api.Middleware
             this._logger = logger;
             _memoryCache = memoryCache;
             _httpContextAccessor = httpContextAccessor;
-            _httpContextAccessor= httpContextAccessor;
+           
         }
 
         public async Task InvokeAsync(HttpContext httpContext)
@@ -35,10 +35,19 @@ namespace HrManegment.Api.Middleware
             {
 
                 var token = _httpContextAccessor.HttpContext.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
+                var ipAddress = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress.ToString();
+                if(ipAddress == "::1") {
+
+                    ipAddress = Dns.GetHostEntry(Dns.GetHostName()).AddressList[1].ToString();
+                }
+                   
+
 
                 if (token != null)
                 {
+                    
                     var UserId = GetUserId(token);
+                  _logger.LogInformation($"This request From Ip={ipAddress} and User Id={UserId}");
 
                     var Blocked = BlockedUser(UserId);
                     if (!Blocked)
@@ -119,7 +128,7 @@ namespace HrManegment.Api.Middleware
            if(_memoryCache.TryGetValue("LogOutUsers", out LogoutCachingData CurrentData))
             {
 
-              var found=CurrentData.UsersId.Find(user=>user==userId);
+              var found=CurrentData.UsersId.FirstOrDefault(user=>user==userId);
                 if(found==userId) 
                    return true;
             }

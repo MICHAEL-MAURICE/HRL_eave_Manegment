@@ -164,7 +164,7 @@ public async Task<(string, string)> RefreshToken(string userRefreshToken)
       
 
 
-        public void AddToCash(List<string>Users)
+        public List<string> AddToCash(List<string>Users)
         {
 
             if (!_memoryCache.TryGetValue("LogOutUsers", out LogoutCachingData CurrentData))
@@ -172,7 +172,7 @@ public async Task<(string, string)> RefreshToken(string userRefreshToken)
 
                 var CashingData = new LogoutCachingData()
                 {
-                    UsersId = Users
+                    UsersId = Users.ToHashSet<string>()
                     
                 };
 
@@ -181,15 +181,20 @@ public async Task<(string, string)> RefreshToken(string userRefreshToken)
 
                 
                 _memoryCache.Set("LogOutUsers", CashingData, cacheEntryOptions);
+
+                return CashingData.UsersId.ToList();
             }
             else
             {
-                CurrentData.UsersId.AddRange(Users);
+                foreach(var user in Users) 
+                CurrentData.UsersId.Add(user);
 
                 var cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.NeverRemove);
 
 
                 _memoryCache.Set("LogOutUsers", CurrentData, cacheEntryOptions);
+
+                return CurrentData.UsersId.ToList();
 
             }
        
