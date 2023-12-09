@@ -49,3 +49,20 @@ C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Infras
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\refint\HR.LeaveManagement.Infrastructure.dll
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\HR.LeaveManagement.Infrastructure.pdb
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\ref\HR.LeaveManagement.Infrastructure.dll
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\bin\Debug\net7.0\HR.LeaveManagement.Infrastructure.deps.json
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\bin\Debug\net7.0\HR.LeaveManagement.Infrastructure.dll
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\bin\Debug\net7.0\HR.LeaveManagement.Infrastructure.pdb
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\bin\Debug\net7.0\HR.LeaveManagement.Domain.dll
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\bin\Debug\net7.0\HrManegment.Application.dll
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\bin\Debug\net7.0\HrManegment.Application.pdb
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\bin\Debug\net7.0\HR.LeaveManagement.Domain.pdb
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\HR.LeaveManagement.Infrastructure.csproj.AssemblyReference.cache
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\HR.LeaveManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\HR.LeaveManagement.Infrastructure.AssemblyInfoInputs.cache
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\HR.LeaveManagement.Infrastructure.AssemblyInfo.cs
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\HR.LeaveManagement.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\HR.LeaveManagement.Infrastructure.csproj.CopyComplete
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\HR.LeaveManagement.Infrastructure.dll
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\refint\HR.LeaveManagement.Infrastructure.dll
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\HR.LeaveManagement.Infrastructure.pdb
+C:\Projects\HrLastVersion\HR.LeaveManagement.Infrastructure\obj\Debug\net7.0\ref\HR.LeaveManagement.Infrastructure.dll

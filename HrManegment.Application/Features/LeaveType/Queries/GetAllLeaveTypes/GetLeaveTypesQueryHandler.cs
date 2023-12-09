@@ -31,7 +31,7 @@ namespace HrManegment.Application.Features.LeaveType.Queries.GetAllLeaveTypes
 
            
             // Query the database
-            var leaveTypes = await _leaveTypeRepository.GetAsync();
+            var leaveTypes = await _leaveTypeRepository.GetAsync(request.PageNumber,request.Count);
             if(leaveTypes == null )
             {
                 return Enumerable.Empty<LeaveTypeDto>();

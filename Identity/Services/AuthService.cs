@@ -46,12 +46,6 @@ namespace HR.LeaveManagement.Identity.Services
             
             var user = await _userManager.FindByEmailAsync(request.Email);
 
-            if (_memoryCache.TryGetValue("LogOutUsers", out LogoutCachingData CurrentData))
-            {
-
-                CurrentData.UsersId.Remove(user.Id);
-
-            }
                 if (user == null)
             {
                 throw new NotFoundException($"User with {request.Email} not found.", request.Email);
@@ -64,11 +58,21 @@ namespace HR.LeaveManagement.Identity.Services
                 throw new BadRequestException($"Credentials for '{request.Email} aren't valid'.");
             }
 
+
+            if (_memoryCache.TryGetValue("LogOutUsers", out LogoutCachingData CurrentData))
+            {
+
+                if(CurrentData.UsersId.Contains(user.Id))
+
+                CurrentData.UsersId.Remove(user.Id);
+
+            }
             var jwtSecurityToken = await GenerateToken(user.Id);
 
             var response = new AuthResponse
             {
                 Id = user.Id,
+                ExpiredOn = jwtSecurityToken.Item1.ValidTo,
                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken.Item1),
                 Email = user.Email,
                 UserName = user.UserName,
@@ -177,6 +181,16 @@ public async Task<(string, string)> RefreshToken(string userRefreshToken)
 
                 
                 _memoryCache.Set("LogOutUsers", CashingData, cacheEntryOptions);
+            }
+            else
+            {
+                CurrentData.UsersId.AddRange(Users);
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.NeverRemove);
+
+
+                _memoryCache.Set("LogOutUsers", CurrentData, cacheEntryOptions);
+
             }
        
 
@@ -371,7 +385,7 @@ public async Task<(string, string)> RefreshToken(string userRefreshToken)
 
                claims: claims,
 
-               expires: DateTime.Now.AddMinutes(_jwtSettings.DurationInMinutes),
+               expires: DateTime.UtcNow.AddMinutes(_jwtSettings.DurationInMinutes),
 
                signingCredentials: signingCredentials);
 

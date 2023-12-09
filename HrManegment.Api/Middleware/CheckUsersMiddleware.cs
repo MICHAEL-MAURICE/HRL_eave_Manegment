@@ -62,7 +62,7 @@ namespace HrManegment.Api.Middleware
 
 
                 }
-
+                else await _next(httpContext);
             }
 
             else await _next(httpContext);

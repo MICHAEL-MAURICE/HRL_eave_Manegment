@@ -36,3 +36,22 @@ C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.pdb
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.genruntimeconfig.cache
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\ref\Identity.dll
+C:\Projects\HrLastVersion\Identity\bin\Debug\net7.0\Identity.deps.json
+C:\Projects\HrLastVersion\Identity\bin\Debug\net7.0\Identity.runtimeconfig.json
+C:\Projects\HrLastVersion\Identity\bin\Debug\net7.0\Identity.dll
+C:\Projects\HrLastVersion\Identity\bin\Debug\net7.0\Identity.pdb
+C:\Projects\HrLastVersion\Identity\bin\Debug\net7.0\HR.LeaveManagement.Domain.dll
+C:\Projects\HrLastVersion\Identity\bin\Debug\net7.0\HrManegment.Application.dll
+C:\Projects\HrLastVersion\Identity\bin\Debug\net7.0\HrManegment.Application.pdb
+C:\Projects\HrLastVersion\Identity\bin\Debug\net7.0\HR.LeaveManagement.Domain.pdb
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\Identity.csproj.AssemblyReference.cache
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\Identity.AssemblyInfoInputs.cache
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\Identity.AssemblyInfo.cs
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\Identity.csproj.CoreCompileInputs.cache
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\Identity.csproj.CopyComplete
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\Identity.dll
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\refint\Identity.dll
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\Identity.pdb
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\Identity.genruntimeconfig.cache
+C:\Projects\HrLastVersion\Identity\obj\Debug\net7.0\ref\Identity.dll

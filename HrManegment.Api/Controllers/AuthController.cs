@@ -31,15 +31,15 @@ namespace HrManegment.Api.Controllers
         }
 
 
-        [HttpGet("LogoutAllUsers")]
-        public ActionResult LogoutAllUsers()
-        {
-            _authenticationService.LogoutAllUsers();
-            return Ok();
-        }
+        //[HttpGet("LogoutAllUsers")]
+        //public ActionResult LogoutAllUsers()
+        //{
+        //    _authenticationService.LogoutAllUsers();
+        //    return Ok();
+        //}
 
 
-        [HttpGet("ClearCach")]
+        [HttpDelete("ClearCach")]
         public ActionResult ClearCach()
         {
             _authenticationService.ClearCach();

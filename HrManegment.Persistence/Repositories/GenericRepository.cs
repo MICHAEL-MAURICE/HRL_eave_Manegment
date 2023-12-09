@@ -30,7 +30,7 @@ namespace HrManegment.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IReadOnlyList<T>> GetAsync(int PageNumber = 1, int Count = 10)
+        public async Task<IReadOnlyList<T>> GetAsync(int PageNumber , int Count )
         {
             if (PageNumber > 0 && Count > 0)
             {

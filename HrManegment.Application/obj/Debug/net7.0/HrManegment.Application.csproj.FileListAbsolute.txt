@@ -43,3 +43,18 @@ C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\o
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\refint\HrManegment.Application.dll
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.pdb
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\ref\HrManegment.Application.dll
+C:\Projects\HrLastVersion\HrManegment.Application\bin\Debug\net7.0\HrManegment.Application.deps.json
+C:\Projects\HrLastVersion\HrManegment.Application\bin\Debug\net7.0\HrManegment.Application.dll
+C:\Projects\HrLastVersion\HrManegment.Application\bin\Debug\net7.0\HrManegment.Application.pdb
+C:\Projects\HrLastVersion\HrManegment.Application\bin\Debug\net7.0\HR.LeaveManagement.Domain.dll
+C:\Projects\HrLastVersion\HrManegment.Application\bin\Debug\net7.0\HR.LeaveManagement.Domain.pdb
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.csproj.AssemblyReference.cache
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.AssemblyInfoInputs.cache
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.AssemblyInfo.cs
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.csproj.CoreCompileInputs.cache
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.csproj.CopyComplete
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.dll
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\refint\HrManegment.Application.dll
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.pdb
+C:\Projects\HrLastVersion\HrManegment.Application\obj\Debug\net7.0\ref\HrManegment.Application.dll
