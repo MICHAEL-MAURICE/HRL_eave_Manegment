@@ -5,6 +5,7 @@ using HR.LeaveManagement.Application.Models.Identity;
 using HR.LeaveManagement.Domain;
 using HrManegment.Application.Model.Identity;
 using HrManegment.Persistence.DatabaseContext;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Caching.Memory;
@@ -15,10 +16,14 @@ using Microsoft.VisualBasic;
 using System.CodeDom.Compiler;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net.Http;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.AspNetCore.Mvc;
+using HrManegment.Application.Exceptions;
 
 namespace HR.LeaveManagement.Identity.Services
 {
@@ -29,17 +34,22 @@ namespace HR.LeaveManagement.Identity.Services
         private readonly JwtSettings _jwtSettings;
         private readonly IMemoryCache _memoryCache;
         private readonly HrDatabaseContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
 
         public AuthService(UserManager<ApplicationUser> userManager,
             IOptions<JwtSettings> jwtSettings,
-            SignInManager<ApplicationUser> signInManager,  IMemoryCache memoryCache,HrDatabaseContext context)
+            SignInManager<ApplicationUser> signInManager,  IMemoryCache memoryCache,HrDatabaseContext context
+           , IHttpContextAccessor httpContextAccessor
+
+            )
         {
             _userManager = userManager;
             _jwtSettings = jwtSettings.Value;
             _signInManager = signInManager;
             _memoryCache = memoryCache;
             _context = context;
+        _httpContextAccessor= httpContextAccessor;  
    
         }
 
@@ -54,10 +64,6 @@ namespace HR.LeaveManagement.Identity.Services
                 throw new NotFoundException($"User with {request.Email} not found.", request.Email);
             }
 
-            if (user.IsActive == false)
-            {
-                throw new UnauthorizedAccessException("You are not authorized to access this resource.");
-            }
         
 
             var result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
@@ -74,6 +80,16 @@ namespace HR.LeaveManagement.Identity.Services
                 if(CurrentData.UsersId.Contains(user.Id))
 
                 CurrentData.UsersId.Remove(user.Id);
+
+            }
+
+
+
+            if (user.IsActive == false)
+            {
+               
+               throw new CustomUnauthorizedAccessException("You are not authorized to access this resource.");
+               
 
             }
             var jwtSecurityToken = await GenerateToken(user.Id);
@@ -214,11 +230,14 @@ public async Task<(string, string)> RefreshToken(string userRefreshToken)
 
         public string BlockUser(string UserId)
         {
-            var userStatus =_context.Users.Where(user=>user.Id== UserId).Select(user=>user.IsActive).FirstOrDefault();
+            var userStatus =_context.Users.Where(user=>user.Id== UserId).FirstOrDefault();
+
             if (userStatus != null)
             {
-                userStatus = false;
+                userStatus.IsActive = false;
                 _context.SaveChanges();
+
+                AddToCash(new List<string>() { UserId });
                 return "This User Is UnActive now";
             }
 
@@ -230,10 +249,10 @@ public async Task<(string, string)> RefreshToken(string userRefreshToken)
 
         public string UnBlockUser(string UserId)
         {
-            var userStatus = _context.Users.Where(user => user.Id == UserId).Select(user => user.IsActive).FirstOrDefault();
+            var userStatus = _context.Users.Where(user => user.Id == UserId).FirstOrDefault();
             if (userStatus != null)
             {
-                userStatus = true;
+                userStatus.IsActive = true;
                 _context.SaveChanges();
                 return "This User Is Active now";
             }

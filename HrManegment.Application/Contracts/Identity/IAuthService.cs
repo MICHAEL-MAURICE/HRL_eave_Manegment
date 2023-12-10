@@ -17,7 +17,8 @@ namespace HR.LeaveManagement.Application.Contracts.Identity
         public void ClearCach();
         public  void LogoutAllUsers();
 
-        public Guid BlockUser(string UserId);
+        public string BlockUser(string UserId);
+        public string UnBlockUser(string UserId);
 
     }
 }

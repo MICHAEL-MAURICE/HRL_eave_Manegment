@@ -1,6 +1,7 @@
 ﻿using HR.LeaveManagement.Application.Contracts.Identity;
 using HR.LeaveManagement.Application.Models.Identity;
 using HR.LeaveManagement.Identity.Services;
+using HrManegment.Application.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
@@ -21,7 +22,15 @@ namespace HrManegment.Api.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<AuthResponse>> Login(AuthRequest request)
         {
-            return Ok(await _authenticationService.Login(request));
+
+            try
+            {
+                return Ok(await _authenticationService.Login(request));
+            }
+            catch (CustomUnauthorizedAccessException)
+            {
+                return Unauthorized("User is not active.");
+            }
         }
 
         [HttpPost("register")]
