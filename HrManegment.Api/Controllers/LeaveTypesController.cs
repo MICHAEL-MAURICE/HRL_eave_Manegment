@@ -6,6 +6,7 @@ using HrManegment.Application.Features.LeaveType.Queries.GetLeaveTypeDetails;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,6 +26,7 @@ namespace HrManegment.Api.Controllers
             _mediator = mediator;
         }
         // GET: api/<LeaveTypesController>
+        [EnableRateLimiting("Fixed")]
         [HttpGet]
         public async Task<ActionResult< List<LeaveTypeDto>>> Get(int PageNumber = 1, int Count = 10)
         {

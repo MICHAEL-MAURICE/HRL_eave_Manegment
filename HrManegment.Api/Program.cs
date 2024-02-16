@@ -9,6 +9,8 @@ using HrManegment.Persistence;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using System.Collections.Concurrent;
+using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,7 +46,16 @@ builder.Services.AddMemoryCache();
 
 builder.Services.AddRateLimiter(options =>
 {
-
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+    options.AddPolicy("Fixed", HttpContext =>
+    RateLimitPartition.GetFixedWindowLimiter(
+        partitionKey: HttpContext.Connection.RemoteIpAddress.ToString(),
+        factory:Partition=>new FixedWindowRateLimiterOptions { 
+            
+            PermitLimit=10,
+        Window=TimeSpan.FromSeconds(10)
+        }
+        ));
 
 });
 var app = builder.Build();
@@ -55,10 +66,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
- 
 
 
 
+app.UseRateLimiter();
 
 
 
