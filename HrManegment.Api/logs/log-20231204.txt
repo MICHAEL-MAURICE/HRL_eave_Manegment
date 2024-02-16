@@ -222,3 +222,8 @@ System.InvalidOperationException: The request reached the end of the pipeline wi
 2023-12-04 14:02:23.206 +02:00 [INF] Application started. Press Ctrl+C to shut down.
 2023-12-04 14:02:23.206 +02:00 [INF] Hosting environment: Development
 2023-12-04 14:02:23.207 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2023-12-04 17:42:05.242 +02:00 [INF] Now listening on: https://localhost:7242
+2023-12-04 17:42:05.265 +02:00 [INF] Now listening on: http://localhost:5201
+2023-12-04 17:42:05.267 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-04 17:42:05.267 +02:00 [INF] Hosting environment: Development
+2023-12-04 17:42:05.268 +02:00 [INF] Content root path: C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Api

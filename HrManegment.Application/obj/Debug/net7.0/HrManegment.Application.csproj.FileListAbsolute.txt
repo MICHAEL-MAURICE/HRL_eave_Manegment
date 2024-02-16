@@ -28,3 +28,18 @@ C:\Projects\git\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrMa
 C:\Projects\git\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\refint\HrManegment.Application.dll
 C:\Projects\git\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.pdb
 C:\Projects\git\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\ref\HrManegment.Application.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\bin\Debug\net7.0\HrManegment.Application.deps.json
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\bin\Debug\net7.0\HrManegment.Application.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\bin\Debug\net7.0\HrManegment.Application.pdb
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\bin\Debug\net7.0\HR.LeaveManagement.Domain.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\bin\Debug\net7.0\HR.LeaveManagement.Domain.pdb
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.csproj.AssemblyReference.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.AssemblyInfoInputs.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.AssemblyInfo.cs
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.csproj.CoreCompileInputs.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.csproj.CopyComplete
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\refint\HrManegment.Application.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.pdb
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\ref\HrManegment.Application.dll

@@ -17,3 +17,22 @@ C:\Projects\git\HRL_eave_Manegment\Identity\obj\Debug\net7.0\refint\Identity.dll
 C:\Projects\git\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.pdb
 C:\Projects\git\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.genruntimeconfig.cache
 C:\Projects\git\HRL_eave_Manegment\Identity\obj\Debug\net7.0\ref\Identity.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\bin\Debug\net7.0\Identity.deps.json
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\bin\Debug\net7.0\Identity.runtimeconfig.json
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\bin\Debug\net7.0\Identity.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\bin\Debug\net7.0\Identity.pdb
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\bin\Debug\net7.0\HR.LeaveManagement.Domain.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\bin\Debug\net7.0\HrManegment.Application.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\bin\Debug\net7.0\HrManegment.Application.pdb
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\bin\Debug\net7.0\HR.LeaveManagement.Domain.pdb
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.csproj.AssemblyReference.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.AssemblyInfoInputs.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.AssemblyInfo.cs
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.csproj.CoreCompileInputs.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.csproj.CopyComplete
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\refint\Identity.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.pdb
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.genruntimeconfig.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\ref\Identity.dll

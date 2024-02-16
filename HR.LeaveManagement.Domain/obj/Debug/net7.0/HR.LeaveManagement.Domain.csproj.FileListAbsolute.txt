@@ -22,3 +22,15 @@ C:\Projects\git\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\HR
 C:\Projects\git\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\refint\HR.LeaveManagement.Domain.dll
 C:\Projects\git\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\HR.LeaveManagement.Domain.pdb
 C:\Projects\git\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\ref\HR.LeaveManagement.Domain.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\bin\Debug\net7.0\HR.LeaveManagement.Domain.deps.json
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\bin\Debug\net7.0\HR.LeaveManagement.Domain.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\bin\Debug\net7.0\HR.LeaveManagement.Domain.pdb
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\HR.LeaveManagement.Domain.csproj.AssemblyReference.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\HR.LeaveManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\HR.LeaveManagement.Domain.AssemblyInfoInputs.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\HR.LeaveManagement.Domain.AssemblyInfo.cs
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\HR.LeaveManagement.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\HR.LeaveManagement.Domain.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\refint\HR.LeaveManagement.Domain.dll
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\HR.LeaveManagement.Domain.pdb
+C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HR.LeaveManagement.Domain\obj\Debug\net7.0\ref\HR.LeaveManagement.Domain.dll
