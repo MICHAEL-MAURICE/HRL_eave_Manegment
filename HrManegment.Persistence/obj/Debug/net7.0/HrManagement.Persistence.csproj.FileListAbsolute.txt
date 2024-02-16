@@ -49,3 +49,4 @@ C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Persistence\o
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Persistence\obj\Debug\net7.0\refint\HrManagement.Persistence.dll
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Persistence\obj\Debug\net7.0\HrManagement.Persistence.pdb
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Persistence\obj\Debug\net7.0\ref\HrManagement.Persistence.dll
+C:\Projects\git\HRL_eave_Manegment\HrManegment.Persistence\obj\Debug\net7.0\HrManagement.Persistence.sourcelink.json

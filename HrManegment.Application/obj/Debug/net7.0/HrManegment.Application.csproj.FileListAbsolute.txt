@@ -43,3 +43,4 @@ C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\o
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\refint\HrManegment.Application.dll
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.pdb
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\ref\HrManegment.Application.dll
+C:\Projects\git\HRL_eave_Manegment\HrManegment.Application\obj\Debug\net7.0\HrManegment.Application.sourcelink.json

@@ -36,3 +36,4 @@ C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.pdb
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.genruntimeconfig.cache
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\Identity\obj\Debug\net7.0\ref\Identity.dll
+C:\Projects\git\HRL_eave_Manegment\Identity\obj\Debug\net7.0\Identity.sourcelink.json

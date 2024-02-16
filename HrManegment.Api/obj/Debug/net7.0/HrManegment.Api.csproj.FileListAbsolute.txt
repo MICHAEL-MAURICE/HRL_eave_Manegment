@@ -344,3 +344,4 @@ C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Api\obj\Debug
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Api\obj\Debug\net7.0\HrManegment.Api.csproj.CopyComplete
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Api\obj\Debug\net7.0\HrManegment.Api.genruntimeconfig.cache
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Api\obj\Debug\net7.0\ref\HrManegment.Api.dll
+C:\Projects\git\HRL_eave_Manegment\HrManegment.Api\obj\Debug\net7.0\HrManegment.Api.sourcelink.json
