@@ -41,6 +41,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddMemoryCache();
+
+builder.Services.AddRateLimiter(options =>
+{
+
+
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -49,7 +55,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+ 
 
 
 
