@@ -1,0 +1,29 @@
+2024-02-26 22:17:26.825 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-02-26 22:17:26.915 +02:00 [INF] Now listening on: https://localhost:7242
+2024-02-26 22:17:26.917 +02:00 [INF] Now listening on: http://localhost:5201
+2024-02-26 22:17:26.919 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-26 22:17:26.920 +02:00 [INF] Hosting environment: Development
+2024-02-26 22:17:26.921 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2024-02-26 22:17:36.209 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 2.2354 ms
+2024-02-26 22:18:04.692 +02:00 [INF] HTTP POST /api/LeaveTypes/Post responded 200 in 0.1847 ms
+2024-02-26 22:18:19.127 +02:00 [INF] HTTP POST /api/LeaveTypes/Post responded 200 in 0.0134 ms
+2024-02-26 22:18:27.351 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.0159 ms
+2024-02-26 22:18:32.076 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.0121 ms
+2024-02-26 22:18:32.655 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.0120 ms
+2024-02-26 22:18:33.078 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.0122 ms
+2024-02-26 22:18:33.254 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.0117 ms
+2024-02-26 22:19:06.890 +02:00 [INF] Now listening on: http://localhost:5201
+2024-02-26 22:19:06.916 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-26 22:19:06.917 +02:00 [INF] Hosting environment: Development
+2024-02-26 22:19:06.917 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2024-02-26 22:19:22.060 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 2.0364 ms
+2024-02-26 22:19:33.756 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.1789 ms
+2024-02-26 22:19:51.495 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.0138 ms
+2024-02-26 22:19:52.515 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.0111 ms
+2024-02-26 22:20:31.610 +02:00 [INF] Now listening on: http://localhost:5201
+2024-02-26 22:20:31.636 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-26 22:20:31.638 +02:00 [INF] Hosting environment: Development
+2024-02-26 22:20:31.638 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api
+2024-02-26 22:20:43.225 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 2.2259 ms
+2024-02-26 22:20:59.110 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.1123 ms
+2024-02-26 22:21:03.762 +02:00 [INF] HTTP GET /api/LeaveTypes/Get responded 200 in 0.0192 ms

@@ -1,0 +1,6 @@
+2024-02-19 22:30:32.245 +02:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-02-19 22:30:32.331 +02:00 [INF] Now listening on: https://localhost:7242
+2024-02-19 22:30:32.333 +02:00 [INF] Now listening on: http://localhost:5201
+2024-02-19 22:30:32.336 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-19 22:30:32.336 +02:00 [INF] Hosting environment: Development
+2024-02-19 22:30:32.337 +02:00 [INF] Content root path: C:\Projects\git\HRL_eave_Manegment\HrManegment.Api

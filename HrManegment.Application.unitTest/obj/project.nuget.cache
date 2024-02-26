@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Kl/Haj2sdODdg6qntKj8FyibUunWkXvmOLcj1HlhXg46BLbK0lr23T61foSfFrCuED+/G2MtDO1aPstpvEMTRA==",
+  "dgSpecHash": "nZsXVAfLktQlTrpuHq1EETcswJ0lb8xerO8xwrisWe5182PDAgMuME6KvjdO6qsZ2TSS/iV+hhypCFzfkWyicA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\git\\HRL_eave_Manegment\\HrManegment.Application.unitTest\\HrManegment.Application.unitTest.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,11 @@
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.11\\microsoft.aspnetcore.cryptography.keyderivation.7.0.11.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.12\\microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.12\\microsoft.entityframeworkcore.analyzers.7.0.12.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.11\\microsoft.extensions.identity.core.7.0.11.nupkg.sha512",

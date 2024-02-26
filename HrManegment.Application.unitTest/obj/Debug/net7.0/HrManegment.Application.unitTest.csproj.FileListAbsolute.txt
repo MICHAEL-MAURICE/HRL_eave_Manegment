@@ -353,3 +353,9 @@ C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application.u
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application.unitTest\obj\Debug\net7.0\HrManegment.Application.unitTest.pdb
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application.unitTest\obj\Debug\net7.0\HrManegment.Application.unitTest.genruntimeconfig.cache
 C:\Users\Alley Ibrahim\source\repos\HRL_eave_Manegment\HrManegment.Application.unitTest\obj\Debug\net7.0\ref\HrManegment.Application.unitTest.dll
+C:\Projects\git\HRL_eave_Manegment\HrManegment.Application.unitTest\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Projects\git\HRL_eave_Manegment\HrManegment.Application.unitTest\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projects\git\HRL_eave_Manegment\HrManegment.Application.unitTest\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Projects\git\HRL_eave_Manegment\HrManegment.Application.unitTest\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projects\git\HRL_eave_Manegment\HrManegment.Application.unitTest\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Projects\git\HRL_eave_Manegment\HrManegment.Application.unitTest\obj\Debug\net7.0\HrManegment.Application.unitTest.sourcelink.json

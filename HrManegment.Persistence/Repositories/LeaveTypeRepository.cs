@@ -1,5 +1,6 @@
 ﻿using HR.LeaveManagement.Domain;
 using HrManegment.Application.Contracts.Persistence;
+using HrManegment.Application.Specifications;
 using HrManegment.Persistence.DatabaseContext;
 
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,12 @@ namespace HrManegment.Persistence.Repositories
     {
         public LeaveTypeRepository(HrDatabaseContext context) : base(context)
         {
+        }
+
+        public async Task<List<LeaveType>> GetVacationLeaveType(Specification<LeaveType> specification)
+        {
+            var query = await SpecificationQueryBuilder.GetQueryAsync(_context.LeaveTypes, specification);
+            return await query.ToListAsync();
         }
 
         public async Task<bool> IsLeaveTypeUnique(string name)

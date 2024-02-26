@@ -115,6 +115,8 @@ namespace HrManegment.Api.Middleware
 
         private bool BlockedUser (string userId)
         {
+            
+
 
            if(_memoryCache.TryGetValue("LogOutUsers", out LogoutCachingData CurrentData))
             {

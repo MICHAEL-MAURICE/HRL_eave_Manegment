@@ -26,7 +26,7 @@ namespace HrManegment.Api.Controllers
             _mediator = mediator;
         }
         // GET: api/<LeaveTypesController>
-        [EnableRateLimiting("Fixed")]
+        //[EnableRateLimiting("Fixed")]
         [HttpGet]
         public async Task<ActionResult< List<LeaveTypeDto>>> Get(int PageNumber = 1, int Count = 10)
         {

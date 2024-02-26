@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Pch4Yk0sh7JpGgxgBHadC3EQTNW8xGhIk+3mQ03ptLQ6IResRPnqpg+wLw0jQgvANh8hBXDpKgMo+NZU0++2qg==",
+  "dgSpecHash": "enhUXHJ1WWKAiQxe8MwBDcURSpu2IUHflUwWO9mDdm1xt8k8Sw94+hzip2lf0wOGYCGQ63DYCMRzy5SX0SVvHA==",
   "success": true,
   "projectFilePath": "C:\\Projects\\git\\HRL_eave_Manegment\\HrManegment.Application.IntegrationTest\\HrManegment.Application.IntegrationTest.csproj",
   "expectedPackageFiles": [
@@ -39,9 +39,9 @@
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.2\\microsoft.data.sqlclient.5.0.2.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
-    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
-    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
-    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.11\\microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.12\\microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.12\\microsoft.entityframeworkcore.analyzers.7.0.12.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.2\\microsoft.entityframeworkcore.inmemory.7.0.2.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.11\\microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.10\\microsoft.entityframeworkcore.sqlserver.7.0.10.nupkg.sha512",
